@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Barsan Banerjee – Computer Science & Engineering Student and Software Developer. Portfolio showcasing full-stack web apps, ML models, and networking projects." />
+  <meta name="keywords" content="Barsan Banerjee, CSE student, software developer, portfolio, full-stack, machine learning, web development" />
+  <meta property="og:title" content="Barsan Banerjee | CSE Student & Software Developer" />
+  <meta property="og:description" content="Motivated CSE student building full-stack web apps, ML models, and network systems." />
+  <title>Barsan Banerjee | CSE Student &amp; Software Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ───────────────── LOADER ───────────────── -->
+  <div id="loader" class="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">
+        <span class="loader-bracket">&lt;</span>
+        <span class="loader-name">BB</span>
+        <span class="loader-bracket">/&gt;</span>
+      </div>
+      <div class="loader-bar"><div class="loader-progress"></div></div>
+    </div>
+  </div>
+
+  <!-- ───────────────── NAVBAR ───────────────── -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>Barsan<span class="logo-accent">.</span>dev<span class="logo-bracket">/&gt;</span>
+      </a>
+      <button id="hamburger" class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#achievements" class="nav-link">Achievements</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li>
+          <a href="Barsan_Banerjee_CV.pdf" download class="nav-cta" id="nav-cv-btn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            CV
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ───────────────── HERO ───────────────── -->
+  <section id="home" class="hero">
+    <div class="hero-bg">
+      <div class="hero-bg-overlay"></div>
+      <canvas id="particles-canvas"></canvas>
+    </div>
+
+    <div class="hero-split">
+      <!-- LEFT: Text -->
+      <div class="hero-content" data-animate="fade-left">
+        <h1 class="hero-title">
+          Hi, I'm <span class="gradient-text">Barsan Banerjee</span>
+        </h1>
+        <p class="hero-role">Computer Science &amp; Engineering Student &amp; Software Developer</p>
+        <div class="hero-subtitle">
+          <span class="typed-prefix">I build &nbsp;</span>
+          <span id="typed-text" class="typed-cursor"></span>
+        </div>
+        <p class="hero-desc">
+          Motivated CSE student with hands-on experience in building full-stack web apps, ML models, and network systems. Passionate about turning ideas into elegant, scalable solutions.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary" id="view-projects-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            View Projects
+          </a>
+          <a href="Barsan_Banerjee_CV.pdf" download class="btn btn-secondary" id="download-cv-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download CV
+          </a>
+        </div>
+        <div class="hero-socials">
+          <a href="https://github.com/barsan-collab" target="_blank" rel="noopener" class="social-link" aria-label="GitHub" id="hero-github-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/barsan-banerjee-a27124413/" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn" id="hero-linkedin-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="mailto:barsanbanerjee99@gmail.com" class="social-link" aria-label="Email" id="hero-email-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- RIGHT: Profile Image -->
+      <div class="hero-image-wrap" data-animate="fade-right">
+        <div class="hero-img-glow"></div>
+        <div class="hero-img-ring">
+          <img
+            src="my_profile.jpg"
+            alt="Barsan Banerjee"
+            class="hero-profile-img"
+            id="hero-profile-img"
+          />
+        </div>
+        <!-- Orbiting decoration dots -->
+        <div class="orbit-ring">
+          <span class="orbit-dot od1"></span>
+          <span class="orbit-dot od2"></span>
+          <span class="orbit-dot od3"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-indicator">
+      <span>Scroll Down</span>
+      <div class="scroll-arrow">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────────── ABOUT / EDUCATION ───────────────── -->
+  <section id="about" class="section about-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Get to Know Me</span>
+        <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+        <p class="section-subtitle">A passionate developer crafting digital experiences with purpose</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text glass-card" data-animate="fade-left">
+          <h3>Who I Am</h3>
+          <p>
+            I'm <strong>Barsan Banerjee</strong>, a Computer Science &amp; Engineering student at Brainware University with a strong CGPA of <span class="accent-text">8.53</span>. I thrive at the intersection of software engineering and problem-solving, building everything from full-stack web applications to machine learning pipelines.
+          </p>
+          <p>
+            My journey in technology started with curiosity about how software shapes the world. Today, I actively develop projects that address real-world problems — whether that's intelligently parsing resumes, enabling peer-to-peer file sharing, or predicting house prices using machine learning.
+          </p>
+          <p>
+            Beyond code, I have a passion for cybersecurity and networking, backed by a <span class="accent-text">Cisco NetAcad Cybersecurity certification</span>. I believe in continuous learning and building things that make a difference.
+          </p>
+          <div class="about-stats">
+            <div class="stat-item">
+              <span class="stat-number">8.53</span>
+              <span class="stat-label">CGPA</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">3+</span>
+              <span class="stat-label">Projects</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">3+</span>
+              <span class="stat-label">Certifications</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">1<sup>st</sup></span>
+              <span class="stat-label">Award</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="education-timeline" data-animate="fade-right">
+          <h3>Education</h3>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-card">
+              <div class="timeline-header">
+                <div class="edu-icon">🎓</div>
+                <div>
+                  <h4>B.Tech in Computer Science &amp; Engineering</h4>
+                  <span class="edu-institution">Brainware University, Kolkata</span>
+                </div>
+              </div>
+              <div class="timeline-meta">
+                <span class="badge badge-green">CGPA: 8.53</span>
+                <span class="badge badge-cyan">2024 – Present</span>
+              </div>
+              <p>Pursuing a Bachelor's degree in CSE with a focus on software engineering, machine learning, and computer networks. Actively involved in technical projects and university events.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-card">
+              <div class="timeline-header">
+                <div class="edu-icon">🏫</div>
+                <div>
+                  <h4>Higher Secondary (Class XII)</h4>
+                  <span class="edu-institution">Burdwan Town School</span>
+                </div>
+              </div>
+              <div class="timeline-meta">
+                <span class="badge badge-purple">75.2%</span>
+                <span class="badge badge-cyan">2024</span>
+              </div>
+              <p>Completed Class XII with a focus on Mathematics, Physics, and Computer Science, laying a strong foundation for an engineering career.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-card">
+              <div class="timeline-header">
+                <div class="edu-icon">📚</div>
+                <div>
+                  <h4>Secondary (Madhyamik — Class X)</h4>
+                  <span class="edu-institution">Burdwan Town School</span>
+                </div>
+              </div>
+              <div class="timeline-meta">
+                <span class="badge badge-gold">91.4%</span>
+                <span class="badge badge-cyan">2022</span>
+              </div>
+              <p>Achieved an outstanding 91.4% in the West Bengal Board Madhyamik examination, demonstrating academic excellence across all subjects.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────────── SKILLS ───────────────── -->
+  <section id="skills" class="section skills-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">What I Work With</span>
+        <h2 class="section-title">Technical <span class="gradient-text">Skills</span></h2>
+        <p class="section-subtitle">Technologies and tools I use to bring ideas to life</p>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-category glass-card" data-animate="fade-up">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <h3>Programming Languages</h3>
+          </div>
+          <div class="skills-chips">
+            <span class="skill-chip" data-level="90">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C" width="18" height="18" /> C
+            </span>
+            <span class="skill-chip" data-level="85">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" width="18" height="18" /> Java
+            </span>
+            <span class="skill-chip" data-level="88">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" width="18" height="18" /> JavaScript
+            </span>
+            <span class="skill-chip" data-level="90">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" width="18" height="18" /> Python
+            </span>
+            <span class="skill-chip" data-level="92">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" width="18" height="18" /> HTML5
+            </span>
+            <span class="skill-chip" data-level="88">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" width="18" height="18" /> CSS3
+            </span>
+          </div>
+        </div>
+
+        <div class="skill-category glass-card" data-animate="fade-up" style="--delay:0.1s">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h3>Frameworks &amp; Libraries</h3>
+          </div>
+          <div class="skills-chips">
+            <span class="skill-chip" data-level="82">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask" width="18" height="18" /> Flask
+            </span>
+            <span class="skill-chip" data-level="75">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" width="18" height="18" /> React
+            </span>
+            <span class="skill-chip" data-level="80">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" width="18" height="18" /> Node.js
+            </span>
+            <span class="skill-chip" data-level="78">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas" width="18" height="18" /> Pandas
+            </span>
+            <span class="skill-chip" data-level="75">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikit-learn/scikit-learn-original.svg" alt="Scikit-learn" width="18" height="18" /> Scikit-learn
+            </span>
+          </div>
+        </div>
+
+        <div class="skill-category glass-card" data-animate="fade-up" style="--delay:0.2s">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+            </div>
+            <h3>Databases</h3>
+          </div>
+          <div class="skills-chips">
+            <span class="skill-chip" data-level="85">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" width="18" height="18" /> MongoDB
+            </span>
+            <span class="skill-chip" data-level="78">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" width="18" height="18" /> MySQL
+            </span>
+            <span class="skill-chip" data-level="70">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase" width="18" height="18" /> Firebase
+            </span>
+          </div>
+        </div>
+
+        <div class="skill-category glass-card" data-animate="fade-up" style="--delay:0.3s">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+            </div>
+            <h3>Tools &amp; Platforms</h3>
+          </div>
+          <div class="skills-chips">
+            <span class="skill-chip" data-level="90">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" width="18" height="18" /> VS Code
+            </span>
+            <span class="skill-chip" data-level="88">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" width="18" height="18" /> GitHub
+            </span>
+            <span class="skill-chip" data-level="75">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" width="18" height="18" /> Git
+            </span>
+            <span class="skill-chip" data-level="80">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="#1ba0e2"><path d="M16.566 7.492l-.485 1.44a5.525 5.525 0 00-7.266 5.274 5.54 5.54 0 005.534 5.534 5.525 5.525 0 005.468-4.717h-5.468l1.452-4.315 4.867-4.867c.2.622.31 1.284.31 1.974a8.69 8.69 0 01-8.69 8.689A8.69 8.69 0 013.6 7.815 8.69 8.69 0 0112.29 3.19c2.39 0 4.558.968 6.125 2.533l-1.85 1.77z"/></svg> Wireshark
+            </span>
+            <span class="skill-chip" data-level="70">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" alt="Postman" width="18" height="18" /> Postman
+            </span>
+            <span class="skill-chip" data-level="68">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" width="18" height="18" /> Linux
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────────── PROJECTS ───────────────── -->
+  <section id="projects" class="section projects-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">What I've Built</span>
+        <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+        <p class="section-subtitle">A selection of my key projects — click to explore on GitHub</p>
+      </div>
+
+      <!-- Pinned / Featured Projects -->
+      <div class="featured-projects">
+        <div class="project-card glass-card featured" data-animate="fade-up" id="proj-cv-intellect">
+          <div class="project-card-top">
+            <div class="project-icon-wrap">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12h6M9 16h6M17 21H7a2 2 0 01-2-2V5a2 2 0 012-2h7l5 5v11a2 2 0 01-2 2z"/><path d="M12 2v6h6"/><circle cx="17" cy="17" r="5" stroke="none" fill="currentColor" opacity="0.15"/><path d="M15.5 17.5l1 1 2-2" stroke-width="1.5"/></svg>
+            </div>
+            <span class="featured-badge">⭐ Featured</span>
+          </div>
+          <h3 class="project-title">CV Intellect</h3>
+          <p class="project-desc">An AI-powered resume/CV parser and analyzer that intelligently extracts information, evaluates skills, and provides structured insights from uploaded CVs using NLP techniques.</p>
+          <div class="project-tags">
+            <span class="tag-chip">Python</span>
+            <span class="tag-chip">Flask</span>
+            <span class="tag-chip">NLP</span>
+            <span class="tag-chip">Machine Learning</span>
+            <span class="tag-chip">HTML/CSS</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/barsan-collab/CV-Intellect" target="_blank" rel="noopener" class="project-link" id="proj-cv-github">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              View on GitHub
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card glass-card featured" data-animate="fade-up" style="--delay:0.1s" id="proj-fileshare">
+          <div class="project-card-top">
+            <div class="project-icon-wrap">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </div>
+            <span class="featured-badge">⭐ Featured</span>
+          </div>
+          <h3 class="project-title">FileShare</h3>
+          <p class="project-desc">A secure, real-time peer-to-peer file sharing web application that enables fast, direct file transfers between users through a browser interface without server-side storage.</p>
+          <div class="project-tags">
+            <span class="tag-chip">JavaScript</span>
+            <span class="tag-chip">Node.js</span>
+            <span class="tag-chip">WebRTC</span>
+            <span class="tag-chip">Socket.IO</span>
+            <span class="tag-chip">HTML/CSS</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/barsan-collab/FileShare" target="_blank" rel="noopener" class="project-link" id="proj-fileshare-github">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              View on GitHub
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card glass-card featured" data-animate="fade-up" style="--delay:0.2s" id="proj-house-price">
+          <div class="project-card-top">
+            <div class="project-icon-wrap">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/><polyline points="7 3.5 7 8.5 12 12.5 17 8.5 17 3.5" opacity="0"/></svg>
+            </div>
+            <span class="featured-badge">⭐ Featured</span>
+          </div>
+          <h3 class="project-title">House Price Predictioner</h3>
+          <p class="project-desc">A machine learning web application that predicts house prices based on various features using regression models trained on real estate datasets, providing accurate valuations with a clean UI.</p>
+          <div class="project-tags">
+            <span class="tag-chip">Python</span>
+            <span class="tag-chip">Scikit-learn</span>
+            <span class="tag-chip">Flask</span>
+            <span class="tag-chip">Pandas</span>
+            <span class="tag-chip">Regression</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/barsan-collab/House-Price-Predictioner" target="_blank" rel="noopener" class="project-link" id="proj-house-github">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              View on GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- GitHub Live Repos -->
+      <div class="github-section">
+        <div class="github-section-header">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+          <h3>More on GitHub</h3>
+          <span class="live-badge">
+            <span class="live-dot"></span>Live
+          </span>
+        </div>
+        <div id="github-repos" class="github-repos-grid">
+          <div class="repo-skeleton"></div>
+          <div class="repo-skeleton"></div>
+          <div class="repo-skeleton"></div>
+        </div>
+        <a href="https://github.com/barsan-collab" target="_blank" rel="noopener" class="btn btn-outline view-all-btn" id="view-all-github-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+          View All Repositories
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────────── ACHIEVEMENTS ───────────────── -->
+  <section id="achievements" class="section achievements-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Recognition &amp; Growth</span>
+        <h2 class="section-title">Achievements &amp; <span class="gradient-text">Certifications</span></h2>
+        <p class="section-subtitle">Milestones that reflect my dedication and continuous learning</p>
+      </div>
+
+      <div class="achievements-grid">
+        <div class="achievement-card glass-card" data-animate="fade-up" id="ach-cisco">
+          <div class="achievement-icon cisco">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="achievement-content">
+            <span class="achievement-type">🏅 Certification</span>
+            <h3>Cisco NetAcad Cybersecurity</h3>
+            <p>Completed the Cisco Networking Academy's Cybersecurity course, gaining expertise in network security fundamentals, threat management, and defensive protocols.</p>
+            <div class="achievement-meta">
+              <span class="badge badge-green">Cisco Systems</span>
+              <span class="badge badge-cyan">Cybersecurity</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="achievement-card glass-card" data-animate="fade-up" style="--delay:0.1s" id="ach-udemy">
+          <div class="achievement-icon udemy">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+          </div>
+          <div class="achievement-content">
+            <span class="achievement-type">📚 Certification</span>
+            <h3>Udemy – DSA with Python</h3>
+            <p>Completed a comprehensive Data Structures and Algorithms course on Udemy using Python, mastering fundamental algorithms, complexity analysis, trees, graphs, and dynamic programming.</p>
+            <div class="achievement-meta">
+              <span class="badge badge-purple">Udemy</span>
+              <span class="badge badge-cyan">Python &amp; Algorithms</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="achievement-card glass-card gold-card" data-animate="fade-up" style="--delay:0.2s" id="ach-gold-medal">
+          <div class="achievement-icon gold">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+          </div>
+          <div class="achievement-content">
+            <span class="achievement-type">🥇 Award</span>
+            <h3>Entrepreneurship – 1st Position &amp; Gold Medal</h3>
+            <p>Secured 1st Position and was awarded the Gold Medal at Brainware University's Entrepreneurship event, demonstrating exceptional innovation, presentation skills, and business acumen.</p>
+            <div class="achievement-meta">
+              <span class="badge badge-gold">Gold Medal</span>
+              <span class="badge badge-cyan">Brainware University</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────────── CONTACT ───────────────── -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Let's Connect</span>
+        <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+        <p class="section-subtitle">I'm open to internship opportunities, collaborations, and interesting projects</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info" data-animate="fade-left">
+          <p class="contact-intro">
+            Whether you have a project in mind, want to collaborate, or just want to say hi — my inbox is always open. I'll get back to you as soon as possible!
+          </p>
+          <div class="contact-links">
+            <a href="mailto:barsanbanerjee99@gmail.com" class="contact-link-item" id="contact-email-link">
+              <div class="contact-link-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <span class="contact-link-label">Email</span>
+                <span class="contact-link-value">barsanbanerjee99@gmail.com</span>
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/in/barsan-banerjee-a27124413/" target="_blank" rel="noopener" class="contact-link-item" id="contact-linkedin-link">
+              <div class="contact-link-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </div>
+              <div>
+                <span class="contact-link-label">LinkedIn</span>
+                <span class="contact-link-value">Barsan Banerjee</span>
+              </div>
+            </a>
+            <a href="https://github.com/barsan-collab" target="_blank" rel="noopener" class="contact-link-item" id="contact-github-link">
+              <div class="contact-link-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              </div>
+              <div>
+                <span class="contact-link-label">GitHub</span>
+                <span class="contact-link-value">barsan-collab</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form glass-card" id="contact-form" data-animate="fade-right" novalidate>
+          <div class="form-group">
+            <label for="contact-name">Full Name</label>
+            <input type="text" id="contact-name" name="name" placeholder="Your name" required autocomplete="name" />
+          </div>
+          <div class="form-group">
+            <label for="contact-email">Email Address</label>
+            <input type="email" id="contact-email" name="email" placeholder="your@email.com" required autocomplete="email" />
+          </div>
+          <div class="form-group">
+            <label for="contact-subject">Subject</label>
+            <input type="text" id="contact-subject" name="subject" placeholder="What's this about?" required />
+          </div>
+          <div class="form-group">
+            <label for="contact-message">Message</label>
+            <textarea id="contact-message" name="message" rows="5" placeholder="Your message here..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary w-full" id="contact-submit-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            Send Message
+          </button>
+          <p class="form-note">* This form opens your default email client</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────────── FOOTER ───────────────── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <span class="logo-bracket">&lt;</span>Barsan<span class="logo-accent">.</span>dev<span class="logo-bracket">/&gt;</span>
+        </div>
+        <p class="footer-tagline">Building the future, one line of code at a time.</p>
+        <div class="footer-socials">
+          <a href="https://github.com/barsan-collab" target="_blank" rel="noopener" aria-label="GitHub" class="footer-social-link" id="footer-github-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/barsan-banerjee-a27124413/" target="_blank" rel="noopener" aria-label="LinkedIn" class="footer-social-link" id="footer-linkedin-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="mailto:barsanbanerjee99@gmail.com" aria-label="Email" class="footer-social-link" id="footer-email-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+        </div>
+        <p class="footer-copyright">
+          &copy; <span id="year"></span> Barsan Banerjee. Crafted with ❤️ and lots of ☕.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <script src="app.js"></script>
+</body>
+</html>
